@@ -24,7 +24,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 - Virtual Machine Creation
 - Installing Active Directory
-- Step 3 Active Directory Confirugation 
+- Step 3 Active Directory Configuration
   
 
 <h2>Deployment and Configuration Steps</h2>
