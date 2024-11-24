@@ -5,29 +5,37 @@
 <h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
 This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
 
+## Table of Contents
 
+- [Environments and Technologies Used](#environments-and-technologies-used)
+- [Operating Systems Used](#operating-systems-used)
+- [High-Level Deployment and Configuration Steps](#high-level-deployment-and-configuration-steps)
+- [Deployment and Configuration Steps](#deployment-and-configuration-steps)
+- [Practical Applications](#practical-applications)
+- [Conclusion](#conclusion)
 
+---
 
-<h2>Environments and Technologies Used</h2>
+## Environments and Technologies Used
 
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Active Directory Domain Services
 - PowerShell
 
-<h2>Operating Systems Used </h2>
+## Operating Systems Used 
 
 - Windows Server 2022
 - Windows 10 (21H2)
 
-<h2>High-Level Deployment and Configuration Steps</h2>
+## High-Level Deployment and Configuration Steps
 
 - Virtual Machine Creation
 - Installing Active Directory
 - Step 3 Active Directory Configuration
   
 
-<h2>Deployment and Configuration Steps</h2>
+## Deployment and Configuration Steps
 
 <p>
 
@@ -156,4 +164,26 @@ Open up the CLIENT-1 virtual machine and open up Settings and then click on syst
 </p>
 <p>
 
-This will be the wrap up for deploying and configuring Active Directory.
+---
+
+## Practical Applications
+
+Once Active Directory (AD) is set up and configured, it can be used in various practical applications. Below are some of the key ways it can be used:
+
+### 1. **User and Group Management**
+   - **Create and Manage Users**: Active Directory allows for the central management of user accounts.
+   - **Group Management**: Organize users into groups for easier resource management.
+
+### 2. **Access Control**
+   - **Role-Based Access Control (RBAC)**: Grant specific roles to users for controlling access to network resources.
+   - **Permissions Management**: Control access to shared resources.
+
+### 3. **Group Policy Management**
+   - **Security Policies**: Enforce company-wide security policies like password length, screen lock timers, etc.
+   - **Automated Configuration**: Apply system configurations automatically.
+
+---
+
+## Conclusion
+
+This will be the wrap-up for deploying and configuring Active Directory. By implementing AD in this setup, businesses can centralize and secure their user management, enforce security policies, and facilitate easier resource access management across the organization.
