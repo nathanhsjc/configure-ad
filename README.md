@@ -158,13 +158,30 @@ Open up the CLIENT-1 virtual machine and open up Settings and then click on syst
 
 ![image](https://github.com/user-attachments/assets/52dfee26-f60a-487a-baa8-345ee150876e)
 
-  For the final step log back into DC-1 and open up Active Directory Users and Computers to verify that CLIENT-1 is apart of the system. Click on the arrow next to mydomain.com and click on the Computers folder. Once that you see it's there it will verify that CLIENT-1 is apart of the domain. To create users for Active Directory you can create a new OU called _CLIENTS. Drag the CLIENT-1 computer from the Computers folder into the newly created _CLIENTS. 
+  For the next step log back into DC-1 and open up Active Directory Users and Computers to verify that CLIENT-1 is apart of the system. Click on the arrow next to mydomain.com and click on the Computers folder. Once that you see it's there it will verify that CLIENT-1 is apart of the domain. To create users for Active Directory you can create a new OU called _CLIENTS. Drag the CLIENT-1 computer from the Computers folder into the newly created _CLIENTS. 
   </p>
 
 </p>
 <p>
+We will setup Remote Desktop for the domain users. We will do this by logging into CLIENT-1 as your admin account (jane_admin in this project that I am using) and navigate into the computers settings. Click on About > Remote Desktop > User Accounts 
 
----
+
+![image](https://github.com/user-attachments/assets/d758df98-622b-4541-8ff0-8f31acba8bf6)
+
+</p>
+
+<p>
+
+Next we will click add and type in (Domain Users), click Check Name and then proceed to click "Ok" to finish. Now our domain users can use Remote Desktop and log into this computer and log into CLIENT-1 as a normal non-administrative user
+
+
+  ![image](https://github.com/user-attachments/assets/35ad63fa-7e02-4ee3-af20-7478c0a45046)
+
+-Image of adding "Domain Users"
+</p>
+  
+  
+  ---
 
 ## Practical Applications
 
