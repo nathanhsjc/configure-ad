@@ -287,6 +287,14 @@ After creating the _TechSupport OU and created the Technicians group I right on 
 Verify the name by clicking "Check Names" and click Ok. The user has been successfully added to the group.
 
 
+
+### 3. **Account Lockouts and Password Resets**
+
+Active Directory has a great usage when it comes to accounts that are locked. 
+
+Accounts can be locked out due to various factors such as incorrect passwords, expired passwords, service account misconfigurations. Fortunately in Active Directory we are able to reset passwords and fix locked accounts.
+
+
 ### 3. **Group Policy Management**
    - **Security Policies**: Enforce company-wide security policies like password length, screen lock timers, etc.
    - **Automated Configuration**: Apply system configurations automatically.
