@@ -273,6 +273,20 @@ This is what the users that are created will look like in Active Directory in th
    - **Role-Based Access Control (RBAC)**: Grant specific roles to users for controlling access to network resources.
    - **Permissions Management**: Control access to shared resources.
 
+#### Instructions
+
+We can assign a role to groups or users by rick clicking and selecting Properties. Here I will show an example on a random user I selected in the _EMPLOYEES folder. I have also created another OU called _TechSupport and added a group within called Technicians. One way to move user's is by clicking on their name and dragging it into the OU. 
+
+![image](https://github.com/user-attachments/assets/c96af2a5-8ad3-41c8-83d9-012beb0263b6)
+
+
+After creating the _TechSupport OU and created the Technicians group I right on a user clicked Properties and clicked "Add to a group". You will then input the group into the "Enter the object names to select" area.
+
+![image](https://github.com/user-attachments/assets/8a8d0eb8-91cf-456d-b97a-42e189b7ecc6)
+
+Verify the name by clicking "Check Names" and click Ok. The user has been successfully added to the group.
+
+
 ### 3. **Group Policy Management**
    - **Security Policies**: Enforce company-wide security policies like password length, screen lock timers, etc.
    - **Automated Configuration**: Apply system configurations automatically.
