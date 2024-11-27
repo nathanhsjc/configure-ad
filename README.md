@@ -189,7 +189,85 @@ Once Active Directory (AD) is set up and configured, it can be used in various p
 
 ### 1. **User and Group Management**
    - **Create and Manage Users**: Active Directory allows for the central management of user accounts.
-   - **Group Management**: Organize users into groups for easier resource management.
+    - **Group Management**: Organize users into groups for easier resource management.
+#### Instructions:
+Log into DC-1 with the public IP address and open up Windows PowerShell ISE as an administrator by ricking clicking on PowerShell. For this project we will be creating 500 users though you are free to create as many users as you want. 
+
+![image](https://github.com/user-attachments/assets/49740be3-d5c1-4579-b4e1-7816884f430d)
+
+
+</p>
+
+Click create a new script (Paper icon underneath File). There are various scripts you can use. Here is an example script that we will be using for this project that will create the users and add them into the _EMPLOYEES folder in Active Directory. Save the script below by clicking File and saving it as a File. After that is done paste the script into PowerShell
+ # ----- Edit these Variables for your own Use Case ----- #
+$PASSWORD_FOR_USERS   = "Password1"
+$NUMBER_OF_ACCOUNTS_TO_CREATE = 500
+# ------------------------------------------------------ #
+
+Function generate-random-name() {
+    $consonants = @('b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','w','x','z')
+    $vowels = @('a','e','i','o','u','y')
+    $nameLength = Get-Random -Minimum 3 -Maximum 7
+    $count = 0
+    $name = ""
+
+    while ($count -lt $nameLength) {
+        if ($($count % 2) -eq 0) {
+            $name += $consonants[$(Get-Random -Minimum 0 -Maximum $($consonants.Count - 1))]
+        }
+        else {
+            $name += $vowels[$(Get-Random -Minimum 0 -Maximum $($vowels.Count - 1))]
+        }
+        $count++
+    }
+
+    return $name
+
+}
+
+$count = 1
+while ($count -lt $NUMBER_OF_ACCOUNTS_TO_CREATE) {
+    $fisrtName = generate-random-name
+    $lastName = generate-random-name
+    $username = $fisrtName + '.' + $lastName
+    $password = ConvertTo-SecureString $PASSWORD_FOR_USERS -AsPlainText -Force
+
+    Write-Host "Creating user: $($username)" -BackgroundColor Black -ForegroundColor Cyan
+    
+    New-AdUser -AccountPassword $password `
+               -GivenName $firstName `
+               -Surname $lastName `
+               -DisplayName $username `
+               -Name $username `
+               -EmployeeID $username `
+               -PasswordNeverExpires $true `
+               -Path "ou=_EMPLOYEES,$(([ADSI]`"").distinguishedName)" `
+               -Enabled $true
+    $count++
+}
+
+
+![image](https://github.com/user-attachments/assets/77e15d90-2510-473e-bc83-d26c942576b3)
+
+This is how it will look when pasted into PowerShell.
+
+</p>
+
+Next run the script by clicking the green arrow icon.
+
+![image](https://github.com/user-attachments/assets/2282bf76-e4cf-40aa-8ca7-f9b7f1abe3e5)
+
+
+We can observe the script running and users being generated in PowerShell.
+
+All of the users we have created will share the same password so when attempting to login you can use the same password until you configure a password change setting for the users that are generated. 
+
+
+
+![image](https://github.com/user-attachments/assets/f333bc0e-f704-4639-8bbd-a5711ff7452c)
+
+This is what the users that are created will look like in Active Directory in the _EMPLOYEES folder that we have created earlier.
+
 
 ### 2. **Access Control**
    - **Role-Based Access Control (RBAC)**: Grant specific roles to users for controlling access to network resources.
