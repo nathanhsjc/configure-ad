@@ -54,7 +54,7 @@ Configure the NIC (Network Interface Card) within the DC-1 virtual machine by na
 
 </p>
 <p>
-Retrieve the public IP address for DC-1 and RPD (Remote Desktop Protocol) into the virtual machine. You will see Server Manager populate on your screen once you login. In this lab we will be disabling the firewall. Click on start and type in the Run command and type in wf.msc (windows firewall) and disable it. Click the Windows Defender Firewall Properties and click off to disable for each tab not including the IPsec Settings.
+Retrieve the public IP address for DC-1 and RDP (Remote Desktop Protocol) into the virtual machine. You will see Server Manager populate on your screen once you login. In this lab we will be disabling the firewall. Click on start and type in the Run command and type in wf.msc (windows firewall) and disable it. Click the Windows Defender Firewall Properties and click off to disable for each tab not including the IPsec Settings.
 </p>
 <br />
 
@@ -74,7 +74,7 @@ Navigate back to the Azure and retrieve the private IP address for DC-1. Proceed
 
 </p>
 <p>
-After the restart has been completed, log into CLIENT-1 and ping DC-1's private IP address. To do this, after logging into CLIENT-1 open up PowerShell and ping the private IP address of DC-1 to confirm that it's functioning properly. This shows that the ping has suceeded.
+After the restart has been completed, log into CLIENT-1 and ping DC-1's private IP address. To do this, after logging into CLIENT-1 open up PowerShell and ping the private IP address of DC-1 to confirm that it's functioning properly. This shows that the ping has succeeded.
 
 <p>  
 
@@ -116,7 +116,7 @@ Active Directory is now installed!
 </p>
 <p>
 
-Navigate back to the Server Manager dashboard adn click on the flag with the exclamation mark in the top right corner. CLick "Promote This Server to a Domain Controller" and select add a new forest and input mydomain.com. After this is done input your password into the Domain Controller Options and click next. Proceed to click next until you reach the Prerequisites check and click Install.
+Navigate back to the Server Manager dashboard and click on the flag with the exclamation mark in the top right corner. CLick "Promote This Server to a Domain Controller" and select add a new forest and input mydomain.com. After this is done input your password into the Domain Controller Options and click next. Proceed to click next until you reach the Prerequisites check and click Install.
 
 ![image](https://github.com/user-attachments/assets/ac1d25d2-e6c2-42e3-9f9a-12a4c8a30004)
 
